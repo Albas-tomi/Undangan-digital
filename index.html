@@ -20,6 +20,62 @@
     <title>Undanganku</title>
   </head>
   <body>
+    <!---------------------------------------- Modal --------------------------------------->
+    <div
+      class="bg-green-500 h-screen z-50 fixed left-0 right-0 hidden overflow-hidden"
+      id="modalKu"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <section id="home overflow-hidden">
+        <div
+          class="container px-10 h-screen grid place-items-center bg-gradient-to-b bg-no-repeat from-white from-50% to-orange-300"
+        >
+          <img
+            src="./assets/assets/slide 1/1x/abi erika.png"
+            class="w-[70%]"
+            alt=""
+            data-aos="zoom-in-up"
+          />
+          <div
+            class="main grid place-items-center p-3 bg-gradient-to-b bg-no-repeat from-transparent from-50% to-[#ff4f06]"
+          >
+            <img
+              src="./assets/assets/slide 1/1x/foto bersama 2.png"
+              alt=""
+              data-aos="zoom-in"
+              class="w-[70%]"
+            />
+            <div
+              class="text-xs font-light text-white"
+              style="font-family: 'Montserrat', sans-serif"
+              data-aos="zoom-in"
+            >
+              Yth. Bapak/Ibu/Saudara/i
+            </div>
+            <div
+              class="text-sm uppercase font-semibold text-white my-5"
+              style="font-family: 'Montserrat', sans-serif"
+              data-aos="zoom-in"
+            >
+              "Agus Alfin"
+            </div>
+            <a href="#assalamualaikum">
+              <button
+                href="#foto-abi"
+                class="text-xs py-1 px-6 rounded-full bg-orange-300"
+                style="font-family: 'Montserrat', sans-serif"
+                type="button"
+                onclick="buka()"
+              >
+                Buka Undangan
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!---------------------------------------- Modal --------------------------------------->
     <!-- ----------------------------------- HOME SECTION ----------------------------------- -->
     <section id="home overflow-hidden">
       <img
@@ -35,6 +91,7 @@
         class="absolute right-0 top-[-100px] w-32"
       />
       <div
+        id="assalamualaikum"
         class="container px-10 h-screen grid place-items-center bg-gradient-to-b bg-no-repeat from-white from-50% to-orange-300"
       >
         <img
@@ -67,7 +124,7 @@
             "Agus Alfin"
           </div>
           <a
-            href="#"
+            href="#foto-abi"
             class="text-xs py-1 px-6 rounded-full bg-orange-300"
             style="font-family: 'Montserrat', sans-serif"
             data-aos="zoom-in"
@@ -337,7 +394,7 @@
           data-aos-duration="2000"
         />
       </div>
-    </section>    
+    </section>
     <!-- ----------------------------------- BTN MUSIC ----------------------------------- -->
     <button
       style="position: fixed; bottom: 9vh; right: 2vh; z-index: 1055"
