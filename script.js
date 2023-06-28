@@ -1,6 +1,6 @@
 const buka = async () => {
   document.getElementById("modalKu").removeAttribute("id");
-  document.getElementById("tombol-musik").style.display = "hidden";
+  document.getElementById("tombol-musik").style.display = "block";
   audio.play();
 };
 
