@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -333,8 +337,22 @@
           data-aos-duration="2000"
         />
       </div>
-    </section>
+    </section>    
+    <!-- ----------------------------------- BTN MUSIC ----------------------------------- -->
+    <button
+      style="position: fixed; bottom: 9vh; right: 2vh; z-index: 1055"
+      type="button"
+      id="tombol-musik"
+      style="display: none"
+      class="btn btn-light btn-sm rounded-circle btn-music"
+      onclick="play(this)"
+      data-status="true"
+      data-url="assets/music/akad.mp3"
+    >
+      <i class="fa-solid fa-circle-pause"></i>
+    </button>
   </body>
+  <script src="script.js"></script>
   <script>
     let hariPernikahan = new Date(2023, 6, 7);
     console.log(hariPernikahan);
