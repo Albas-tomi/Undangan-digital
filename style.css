@@ -6,5 +6,8 @@
   display: block;
 }
 #tombol-musik {
-  display: block;
+  display: none;
+}
+#navigation {
+  display: none;
 }
