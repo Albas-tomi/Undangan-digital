@@ -6,7 +6,11 @@
   display: block;
 }
 #tombol-musik {
-  display: none;
+  position: fixed;
+  bottom: 9vh;
+  right: 2vh;
+  z-index: 1055;
+  display: block;
 }
 #navigation {
   display: none;
