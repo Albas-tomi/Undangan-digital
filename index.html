@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -21,7 +25,7 @@
     <title>Undanganku</title>
   </head>
   <body>
-    <!---------------------------------------- Modal --------------------------------------->
+    <!---------------------------------------- MODAL --------------------------------------->
     <div
       class="bg-green-500 h-screen z-50 fixed left-0 right-0 hidden overflow-hidden"
       id="modalKu"
@@ -58,8 +62,9 @@
               class="text-sm uppercase font-semibold text-white my-5"
               style="font-family: 'Montserrat', sans-serif"
               data-aos="zoom-in"
+              id="nama"
             >
-              "Agus Alfin"
+              "NAMA UNDANGAN"
             </div>
             <a href="#assalamualaikum">
               <button
@@ -76,7 +81,7 @@
         </div>
       </section>
     </div>
-    <!---------------------------------------- Modal --------------------------------------->
+    <!---------------------------------------- END MODAL --------------------------------------->
 
     <!-- ----------------------------------- HOME SECTION ----------------------------------- -->
     <section id="home overflow-hidden">
@@ -122,8 +127,9 @@
             class="text-sm uppercase font-semibold text-white my-5"
             style="font-family: 'Montserrat', sans-serif"
             data-aos="zoom-in"
+            id="nama-undangan"
           >
-            "Agus Alfin"
+            "NAMA UNDANGAN"
           </div>
           <a
             href="#foto-abi"
@@ -135,7 +141,6 @@
 
           <!-- Navbar -->
           <nav
-            id="navigation"
             class="fixed left-0 right-0 bottom-5 flex justify-around items-center bg-orange-800 z-50 mx-20 py-2 px-2 rounded-lg text-xl"
           >
             <a href="#home" class="opacity-100 text-white">
@@ -170,6 +175,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------------------------------- END HOME SECTION ----------------------------------- -->
 
     <!-- ----------------------------------- FOTO ABI ERIKA SECTION ----------------------------------- -->
     <section
@@ -259,6 +265,7 @@
         />
       </div>
     </section>
+    <!-- ----------------------------------- END FOTO ABI ERIKA SECTION ----------------------------------- -->
 
     <!-- ----------------------------------- LOKASI FORM ----------------------------------- -->
     <section class="relative top-48 overflow-hidden" id="lokasi-form">
@@ -377,6 +384,7 @@
         <!-- Last pesan -->
       </div>
     </section>
+    <!-- ----------------------------------- END LOKASI FORM ----------------------------------- -->
 
     <!-- ----------------------------------- FOOTER ----------------------------------- -->
     <section id="footer" class="relative overflow-hidden pb-5 top-48">
@@ -428,58 +436,24 @@
           data-aos-duration="2000"
         />
       </div>
-      <button
-        style="position: fixed; bottom: 9vh; right: 2vh; z-index: 999"
-        type="button"
-        id="tombol-musik"
-        class="btn btn-light w-9 h-9 rounded-full bg-white btn-music"
-        onclick="play(this)"
-        data-status="true"
-        data-url="assets/music/akad.mp3"
-      >
-        <i class="bi bi-play-circle"></i>
-      </button>
     </section>
+    <!-- ----------------------------------- END FOOTER ----------------------------------- -->
+
     <!-- ----------------------------------- BTN MUSIC ----------------------------------- -->
+    <button
+      type="button"
+      id="tombol-musik"
+      class="btn btn-light btn-sm rounded-circle btn-music"
+      onclick="play(this)"
+      data-status="true"
+      data-url="assets/music/akad.mp3"
+    >
+      <i class="fa-solid fa-circle-play"></i>
+    </button>
+    <!-- ----------------------------------- END BTN MUSIC ----------------------------------- -->
   </body>
   <script src="script.js"></script>
   <script>
-    let hariPernikahan = new Date(2023, 6, 7);
-    console.log(hariPernikahan);
-
-    let hari = document.getElementById("hari");
-    let jam = document.getElementById("jam");
-    let menit = document.getElementById("menit");
-    let detik = document.getElementById("detik");
-
-    setInterval(function () {
-      let now = new Date();
-      let waktuTunggu = (hariPernikahan - now) / 1000;
-      updateJam(waktuTunggu);
-    }, 1000);
-
-    const updateJam = (sisaWaktu) => {
-      let harii = Math.floor(sisaWaktu / 86400);
-      sisaWaktu -= harii * 86400;
-
-      let jams = Math.floor(sisaWaktu / 3600);
-      sisaWaktu -= jams * 3600;
-
-      let menits = Math.floor(sisaWaktu / 60);
-      sisaWaktu -= menits * 60;
-
-      let detiks = Math.floor(sisaWaktu % 60);
-
-      hari.innerHTML = Number(harii);
-      jam.innerHTML = Number(jams);
-      menit.innerHTML = Number(menits);
-      detik.innerHTML = Number(detiks);
-    };
-
-    const Number = (number) => {
-      return number < 10 ? "0" + number : number;
-    };
-
     AOS.init();
   </script>
 </html>
