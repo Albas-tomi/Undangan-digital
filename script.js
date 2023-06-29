@@ -10,9 +10,13 @@ if (window.location.search) {
 
 // ------------------------------------------- BUKA MODAL AUTOPLAY MUSIC -------------------------------------------
 const buka = async () => {
+  document.getElementById("navigation").removeAttribute("id");
   document.getElementById("modalKu").removeAttribute("id");
   document.getElementById("tombol-musik").style.display = "block";
   audio.play();
+  const btn = document.getElementById("tombol-musik");
+  btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
+  btn.style.display("block");
 };
 // ------------------------------------------- END BUKA MODAL AUTOPLAY MUSIC -------------------------------------------
 
@@ -51,11 +55,11 @@ const play = (btn) => {
   if (btn.getAttribute("data-status").toString() != "true") {
     btn.setAttribute("data-status", "true");
     audio.play();
-    btn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+    btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
   } else {
     btn.setAttribute("data-status", "false");
     audio.pause();
-    btn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
+    btn.innerHTML = '<i class="bi bi-play-circle"></i>';
   }
 };
 
