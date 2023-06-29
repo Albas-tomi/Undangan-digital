@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,52 +17,16 @@
   </head>
   <body>
     <!---------------------------------------- MODAL --------------------------------------->
-    <div
-      class="bg-green-500 h-screen z-50 fixed left-0 right-0 hidden overflow-hidden"
-      id="modalKu"
-      tabindex="-1"
-      aria-hidden="true"
-    >
+    <div class="h-screen z-50 fixed left-0 right-0 hidden overflow-hidden" id="modalKu" tabindex="-1" aria-hidden="true">
       <section id="home overflow-hidden">
-        <div
-          class="container px-10 h-screen grid place-items-center bg-gradient-to-b bg-no-repeat from-white from-50% to-orange-300"
-        >
-          <img
-            src="./assets/assets/slide 1/1x/abi erika.png"
-            class="w-[60%]"
-            alt=""
-          />
-          <div
-            class="main grid place-items-center p-3 bg-gradient-to-b bg-no-repeat -mt-36 from-transparent from-50% to-[#ff4f06]"
-          >
-            <img
-              src="./assets/assets/slide 1/1x/foto bersama 2.png"
-              alt=""
-              class="w-[70%]"
-            />
-            <div
-              class="text-xs font-light text-white"
-              style="font-family: 'Montserrat', sans-serif"
-            >
-              Yth. Bapak/Ibu/Saudara/i
-            </div>
-            <div
-              class="text-sm uppercase font-semibold text-white my-5"
-              style="font-family: 'Montserrat', sans-serif"
-              id="nama"
-            >
-              "NAMA UNDANGAN"
-            </div>
+        <div class="container px-10 h-screen grid place-items-center bg-gradient-to-b bg-no-repeat from-white from-50% to-orange-300">
+          <img src="./assets/assets/slide 1/1x/abi erika.png" class="w-[60%]" alt="" />
+          <div class="main grid place-items-center p-3 bg-gradient-to-b bg-no-repeat -mt-36 from-transparent from-50% to-[#ff4f06]">
+            <img src="./assets/assets/slide 1/1x/foto bersama 2.png" alt="" class="w-[70%]" />
+            <div class="text-xs font-light text-white" style="font-family: 'Montserrat', sans-serif">Yth. Bapak/Ibu/Saudara/i</div>
+            <div class="text-sm uppercase font-semibold text-white my-5" style="font-family: 'Montserrat', sans-serif" id="nama">"NAMA UNDANGAN"</div>
             <a>
-              <button
-                href="#"
-                class="text-xs py-1 px-6 rounded-full bg-orange-300"
-                style="font-family: 'Montserrat', sans-serif"
-                type="button"
-                onclick="buka()"
-              >
-                Buka Undangan
-              </button>
+              <button href="#" class="text-xs py-1 px-6 rounded-full bg-orange-300" style="font-family: 'Montserrat', sans-serif" type="button" onclick="buka()">Buka Undangan</button>
             </a>
           </div>
         </div>
@@ -80,66 +35,19 @@
     <!---------------------------------------- END MODAL --------------------------------------->
 
     <!-- ----------------------------------- HOME SECTION ----------------------------------- -->
-    <section id="home overflow-hidden">
-      <img
-        src="./assets/assets/slide 1/1x/daun 1a.png"
-        alt=""
-        data-aos="fade-up"
-        class="absolute top-[-200px] w-32"
-      />
-      <img
-        src="./assets/assets/slide 1/1x/daun 1b.png"
-        alt=""
-        data-aos="fade-down"
-        class="absolute right-0 top-[-100px] w-32"
-      />
-      <div
-        id="assalamualaikum"
-        class="container px-10 h-screen grid place-items-center bg-gradient-to-b bg-no-repeat from-white from-50% to-orange-300"
-      >
-        <img
-          src="./assets/assets/slide 1/1x/abi erika.png"
-          class="w-[90%]"
-          alt=""
-          data-aos="zoom-in-up"
-        />
-        <div
-          class="main grid place-items-center p-8 bg-gradient-to-b bg-no-repeat from-transparent from-50% to-[#ff4f06]"
-        >
-          <img
-            src="./assets/assets/slide 1/1x/foto bersama 2.png"
-            alt=""
-            data-aos="zoom-in"
-            class="w-72"
-          />
-          <div
-            class="text-xs font-light text-white"
-            style="font-family: 'Montserrat', sans-serif"
-            data-aos="zoom-in"
-          >
-            Yth. Bapak/Ibu/Saudara/i
-          </div>
-          <div
-            class="text-sm uppercase font-semibold text-white my-5"
-            style="font-family: 'Montserrat', sans-serif"
-            data-aos="zoom-in"
-            id="nama-undangan"
-          >
-            "NAMA UNDANGAN"
-          </div>
-          <a
-            href="#foto-abi"
-            class="text-xs py-1 px-6 rounded-full bg-orange-300"
-            style="font-family: 'Montserrat', sans-serif"
-            data-aos="zoom-in"
-            >Buka Undangan</a
-          >
+    <section id="home" class="bg-gradient-to-b from-white from-30% to-orange-300">
+      <img src="./assets/assets/slide 1/1x/daun 1a.png" alt="" data-aos="fade-up" class="absolute top-[-200px] w-32" />
+      <img src="./assets/assets/slide 1/1x/daun 1b.png" alt="" data-aos="fade-down" class="absolute right-0 top-[-100px] w-32" />
+      <div class="container px-10 py-5 grid place-items-center">
+        <img src="./assets/assets/slide 1/1x/abi erika.png" class="w-[90%]" alt="" data-aos="zoom-in-up" />
+        <div class="main grid place-items-center w-[94%] bg-gradient-to-b bg-no-repeat from-transparent from-50% to-[#ff4f06]">
+          <img src="./assets/assets/slide 1/1x/foto bersama 2.png" alt="" data-aos="zoom-in" class="w-72" />
+          <div class="text-xs font-light text-white" style="font-family: 'Montserrat', sans-serif" data-aos="zoom-in">Yth. Bapak/Ibu/Saudara/i</div>
+          <div class="text-sm uppercase font-semibold text-white my-5" style="font-family: 'Montserrat', sans-serif" data-aos="zoom-in" id="nama-undangan">"NAMA UNDANGAN"</div>
+          <a href="#salam" class="text-xs py-1 px-6 rounded-full bg-orange-300" style="font-family: 'Montserrat', sans-serif" data-aos="zoom-in">Buka Undangan</a>
 
           <!-- Navbar -->
-          <nav
-            id="navigation"
-            class="fixed left-0 right-0 bottom-5 flex justify-around items-center bg-orange-800 z-50 mx-20 py-2 px-2 rounded-lg text-xl"
-          >
+          <nav id="navigation" class="fixed left-0 right-0 bottom-5 flex justify-around items-center bg-orange-800 z-50 mx-20 py-2 px-2 rounded-lg text-xl">
             <a href="#" class="opacity-100 text-white">
               <i class="bi bi-house-fill"></i>
             </a>
@@ -154,20 +62,10 @@
             </a>
           </nav>
         </div>
-        <div
-          class="bg-gradient-to-b px-3 from-[#ff4f06] to-white -mt-2 text-white"
-          style="font-family: 'Montserrat', sans-serif"
-        >
-          <div class="text-sm font-bold text-center py-2" data-aos="zoom-in">
-            Assalamualaikum Wr. Wb.
-          </div>
-          <div
-            class="text-center text-xs py-2 pb-14 font-light"
-            data-aos="zoom-in"
-          >
-            Dengan memohon rahmat dan ridho Allah SWT yang telah menciptakan
-            Makhluk-Nya secara berpasang-pasangan, kami bermaksud
-            menyelenggarakan pernikahan kami:
+        <div class="w-[94%] bg-gradient-to-b px-3 from-[#ff4f06] to-transparent -mt-2 text-white" style="font-family: 'Montserrat', sans-serif">
+          <div id="salam" class="text-base font-bold text-center pb-2 mt-8 pt-8" data-aos="zoom-in">Assalamualaikum Wr. Wb.</div>
+          <div class="text-center text-sm py-2 pb-14 font-light" data-aos="zoom-in">
+            Dengan memohon rahmat dan ridho Allah SWT yang telah menciptakan Makhluk-Nya secara berpasang-pasangan, kami bermaksud menyelenggarakan pernikahan kami:
           </div>
         </div>
       </div>
@@ -175,172 +73,60 @@
     <!-- ----------------------------------- END HOME SECTION ----------------------------------- -->
 
     <!-- ----------------------------------- FOTO ABI ERIKA SECTION ----------------------------------- -->
-    <section
-      id="foto-abi"
-      class="flex relative top-44 flex-col justify-center overflow-hidden"
-    >
-      <img
-        data-aos="fade-in"
-        data-aos-duration="1000"
-        class="absolute w-[55%] -left-[135px] top-0"
-        src="./assets/assets/slide 2/1x/daun 2b.png"
-        alt=""
-      />
-      <img
-        src="./assets/assets/slide 2/1x/daun 2a.png"
-        class="absolute w-[55%] -right-[135px] top-[30%]"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        alt=""
-      />
+    <section id="foto-abi" class="flex relative flex-col justify-center items-center overflow-hidden bg-gradient-to-b bg-no-repeat from-orange-300 to-white to-20%">
+      <img data-aos="fade-in" data-aos-duration="1000" class="absolute w-[55%] -left-[135px] top-0" src="./assets/assets/slide 2/1x/daun 2b.png" alt="" />
+      <img src="./assets/assets/slide 2/1x/daun 2a.png" class="absolute w-[55%] -right-[135px] top-[30%]" data-aos="fade-up" data-aos-duration="1000" alt="" />
+
       <div data-aos="zoom-in-up" data-aos-duration="1000">
-        <img
-          class="max-w-full w-[50%] mx-auto"
-          data-aos="zoom-in-up"
-          src="./assets/assets/slide 2//1x/foto abi.png"
-          alt=""
-        />
-        <img
-          data-aos="zoom-in-up"
-          class="max-w-full w-[80%] mx-auto mt-3"
-          src="./assets/assets/slide 2/1x/nama abi.png"
-          alt=""
-        />
-        <img
-          data-aos="zoom-in-up"
-          class="max-w-full w-[70%] mx-auto mt-3"
-          src="./assets/assets/slide 2/1x/ortu abi.png"
-          alt=""
-        />
+        <img class="max-w-full w-[50%] mx-auto" data-aos="zoom-in-up" src="./assets/assets/slide 2//1x/foto abi.png" alt="" />
+        <img data-aos="zoom-in-up" class="max-w-full w-[80%] mx-auto mt-3" src="./assets/assets/slide 2/1x/nama abi.png" alt="" />
+        <img data-aos="zoom-in-up" class="max-w-full w-[70%] mx-auto mt-3" src="./assets/assets/slide 2/1x/ortu abi.png" alt="" />
       </div>
-      <img
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        class="max-w-md w-[25%] mx-auto mt-8"
-        src="./assets/assets/slide 2/1x/cincin.png"
-        alt=""
-      />
+      <img data-aos="zoom-in-up" data-aos-duration="1000" class="max-w-md w-[25%] mx-auto mt-8" src="./assets/assets/slide 2/1x/cincin.png" alt="" />
       <div data-aos="zoom-in-up" data-aos-duration="1000">
-        <img
-          class="max-w-full w-[50%] mx-auto mt-8"
-          src="./assets/assets/slide 2/1x/foto erika.png"
-          alt=""
-        />
-        <img
-          class="max-w-full w-[47%] mx-auto mt-3"
-          src="./assets/assets/slide 2/1x/nama erika.png"
-          alt=""
-        />
-        <img
-          class="max-w-full w-[70%] mx-auto mt-3"
-          src="./assets/assets/slide 2/1x/ortu erika.png"
-          alt=""
-        />
+        <img class="max-w-full w-[50%] mx-auto mt-8" src="./assets/assets/slide 2/1x/foto erika.png" alt="" />
+        <img class="max-w-full w-[47%] mx-auto mt-3" src="./assets/assets/slide 2/1x/nama erika.png" alt="" />
+        <img class="max-w-full w-[70%] mx-auto mt-3" src="./assets/assets/slide 2/1x/ortu erika.png" alt="" />
       </div>
-      <img
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        class="max-w-full px-4 mx-auto mt-16"
-        src="./assets/assets/slide 2/1x/Group 25 (1).png"
-        alt=""
-      />
-      <img
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
-        class="max-w-full w-[85%] mx-auto mt-8"
-        id="date"
-        src="./assets/assets/slide 3/1x/insyaalloh.png"
-        alt=""
-      />
+      <img data-aos="zoom-in-up" data-aos-duration="1000" class="max-w-full px-4 mx-auto mt-16" src="./assets/assets/slide 2/1x/Group 25 (1).png" alt="" />
+      <img data-aos="zoom-in-up" data-aos-duration="1000" class="max-w-full w-[85%] mx-auto pt-8" id="date" src="./assets/assets/slide 3/1x/insyaalloh.png" alt="" />
       <div class="px-5">
-        <img
-          data-aos="zoom-in-up"
-          data-aos-duration="1000"
-          class="max-w-full mx-auto mt-8 mb-8 flex"
-          src="./assets/assets/slide 3/1x/Group 25 (2).png"
-          alt=""
-        />
+        <img data-aos="zoom-in-up" data-aos-duration="1000" class="max-w-full mx-auto mt-8 mb-8 flex" src="./assets/assets/slide 3/1x/Group 25 (2).png" alt="" />
       </div>
     </section>
     <!-- ----------------------------------- END FOTO ABI ERIKA SECTION ----------------------------------- -->
 
     <!-- ----------------------------------- LOKASI FORM ----------------------------------- -->
-    <section class="relative top-48 overflow-hidden" id="lokasi-form">
-      <div
-        class="container items-center mt-8 text-center flex flex-col h-screen justify-center"
-      >
-        <div
-          id="form-container"
-          class="justify-center w-full items-center flex flex-col"
-        >
+    <section class="relative top-16 overflow-hidden bg-gradient-to-b bg-no-repeat from-white via-orange-300 to-white" id="lokasi-form">
+      <div class="container items-center mt-8 pb-52 text-center flex flex-col h-screen justify-center">
+        <div id="form-container" class="justify-center w-full items-center flex flex-col">
           <section class="flex gap-6 flex-col justify-center items-center">
             <a
-              class="justify-center items-center flex"
+              class="justify-center items-center flex mt-8"
               target="_blank"
               href="https://www.google.com/maps/place/Rumah+Singgah+UIN+Maulana+Malik+Ibrahim/@-7.9062356,112.578954,15z/data=!4m6!3m5!1s0x2e7881992e4c065b:0x2c303e7691bcc750!8m2!3d-7.9062356!4d112.578954!16s%2Fg%2F11cjj08w8_?hl=in-ID&entry=ttu"
             >
-              <img
-                data-aos="zoom-in-up"
-                data-aos-duration="500"
-                src="./assets/assets/slide 3/1x/lokasi.png"
-                alt="lokasi"
-                class="w-[40%]"
-              />
+              <img data-aos="zoom-in-up" data-aos-duration="500" src="./assets/assets/slide 3/1x/lokasi.png" alt="lokasi" class="w-[40%]" />
             </a>
-            <img
-              data-aos="fade-in"
-              data-aos-duration="500"
-              src="./assets/assets/slide 3/1x/indahnya yang dinanti.png"
-              alt="indahHari"
-              class="w-[75%]"
-            />
+            <img data-aos="fade-in" data-aos-duration="500" src="./assets/assets/slide 3/1x/indahnya yang dinanti.png" alt="indahHari" class="w-[75%]" />
             <div data-aos="fade-in" data-aos-duration="500" class="flex gap-4">
-              <div id="hari" class="value bg-[#ffc77d] rounded-md p-[10px]">
-                00
-              </div>
-              <div id="jam" class="value bg-[#ffc77d] rounded-md p-[10px]">
-                00
-              </div>
-              <div id="menit" class="value bg-[#ffc77d] rounded-md p-[10px]">
-                00
-              </div>
-              <div id="detik" class="value bg-[#ffc77d] rounded-md p-[10px]">
-                00
-              </div>
+              <div id="hari" class="value bg-[#ffc77d] rounded-md p-[10px]">00</div>
+              <div id="jam" class="value bg-[#ffc77d] rounded-md p-[10px]">00</div>
+              <div id="menit" class="value bg-[#ffc77d] rounded-md p-[10px]">00</div>
+              <div id="detik" class="value bg-[#ffc77d] rounded-md p-[10px]">00</div>
             </div>
           </section>
           <!-- Daun -->
           <section class="flex justify-center py-3">
-            <img
-              data-aos="zoom-in"
-              data-aos-duration="500"
-              src="./assets/assets/slide 3/1x/daun 3a.png"
-              class="w-52 ml-5 bg-none"
-              alt="daun"
-            />
+            <img data-aos="zoom-in" data-aos-duration="500" src="./assets/assets/slide 3/1x/daun 3a.png" class="w-52 ml-5 bg-none" alt="daun" />
           </section>
           <!-- Last Daun -->
         </div>
 
         <!-- Ucapan -->
-        <div
-          class="flex flex-col justify-center items-center gap-6 py-3 pt-8"
-          id="ucapan"
-        >
-          <img
-            data-aos="zoom-in-up"
-            data-aos-duration="500"
-            src="./assets/assets/slide 4/1x/insyaalloh (3).png"
-            alt="ucapan"
-            class="w-[50%]"
-          />
-          <img
-            data-aos="zoom-in-up"
-            data-aos-duration="500"
-            src="./assets//assets/slide 4/1x/indahnya yang dinanti (2).png"
-            alt="Berikan Ucapan"
-            class="w-[60%]"
-          />
+        <div id="ucapan" class="flex flex-col justify-center items-center gap-6 py-3 pt-8">
+          <img data-aos="zoom-in-up" data-aos-duration="500" src="./assets/assets/slide 4/1x/insyaalloh (3).png" alt="ucapan" class="w-[50%]" />
+          <img data-aos="zoom-in-up" data-aos-duration="500" src="./assets//assets/slide 4/1x/indahnya yang dinanti (2).png" alt="Berikan Ucapan" class="w-[60%]" />
         </div>
         <!-- Last Ucapan -->
 
@@ -353,30 +139,12 @@
           method="post"
         >
           <div class="flex flex-col justify-center">
-            <input
-              class="border px-[5px] border-b-2 rounded-md"
-              type="text"
-              placeholder="Nama"
-              id="nama"
-              name="nama"
-              required
-            />
+            <input class="border px-[5px] border-b-2 rounded-md" type="text" placeholder="Nama" id="nama" name="nama" required />
           </div>
           <div class="flex flex-col justify-center">
-            <textarea
-              class="border border-b-2 rounded-md px-[5px]"
-              placeholder="Tulis Ucapan dan Doa"
-              name="ucapan"
-              id="ucapan"
-              rows="5"
-              required
-            ></textarea>
+            <textarea class="border border-b-2 rounded-md px-[5px]" placeholder="Tulis Ucapan dan Doa" name="ucapan" id="ucapan" rows="5" required></textarea>
           </div>
-          <input
-            class="bg-white text-[#ff4f06] w-1/4 rounded-md cursor-pointer"
-            type="submit"
-            value="Kirim"
-          />
+          <input class="bg-white text-[#ff4f06] w-1/4 rounded-md cursor-pointer" type="submit" value="Kirim" />
         </form>
         <!-- Last pesan -->
       </div>
@@ -384,68 +152,24 @@
     <!-- ----------------------------------- END LOKASI FORM ----------------------------------- -->
 
     <!-- ----------------------------------- FOOTER ----------------------------------- -->
-    <section id="footer" class="relative overflow-hidden pb-5 top-48">
-      <img
-        src="./assets/assets/slide 5/1x/daun 1b (2).png"
-        alt=""
-        class="absolute w-28 bottom-[-100px] left-[-65px]"
-        data-aos="fade-up"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      />
-      <img
-        src="./assets/assets/slide 5/1x/daun 1b (3).png"
-        alt=""
-        class="absolute w-28 right-[-50px] top-[370px]"
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1500"
-      />
+    <section id="footer" class="relative overflow-hidden pb-5 bg-gradient-to-b bg-no-repeat">
+      <img src="./assets/assets/slide 5/1x/daun 1b (2).png" alt="" class="absolute w-28 bottom-[-100px] left-[-65px]" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" />
+      <img src="./assets/assets/slide 5/1x/daun 1b (3).png" alt="" class="absolute w-28 right-[-50px] top-[370px]" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" />
       <div class="container pb-10 flex flex-col justify-between h-screen pt-16">
         <div class="text">
-          <div
-            class="text-center text-sm px-12 py-2"
-            style="font-family: 'Montserrat', sans-serif"
-            data-aos="zoom-in"
-          >
-            Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
-            Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
-            kehadiran dan doa restunya, kami mengucapkan terima kasih.
+          <div class="text-center text-sm px-12 py-2" style="font-family: 'Montserrat', sans-serif" data-aos="zoom-in">
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran dan doa restunya, kami mengucapkan terima kasih.
           </div>
-          <div class="text-base font-bold text-center py-2" data-aos="zoom-in">
-            Wassalamu'alaikum Wr. Wb.
-          </div>
+          <div class="text-base font-bold text-center py-2" data-aos="zoom-in">Wassalamu'alaikum Wr. Wb.</div>
         </div>
-        <img
-          src="./assets/assets/slide 5/1x/abi erika 2 (2).png"
-          alt=""
-          class="w-72 ml-6"
-          data-aos="zoom-in-up"
-          data-aos-duration="1500"
-        />
-        <img
-          src="./assets/assets/slide 5/1x/foto bersama (2).png"
-          alt=""
-          class="ml-28"
-          style="scale: 1.7"
-          data-aos="flip-left"
-          data-aos-easing="ease-out-cubic"
-          data-aos-duration="2000"
-        />
+        <img src="./assets/assets/slide 5/1x/abi erika 2 (2).png" alt="" class="w-72 ml-6" data-aos="zoom-in-up" data-aos-duration="1500" />
+        <img src="./assets/assets/slide 5/1x/foto bersama (2).png" alt="" class="ml-28" style="scale: 1.7" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" />
       </div>
     </section>
     <!-- ----------------------------------- END FOOTER ----------------------------------- -->
 
     <!-- ----------------------------------- BTN MUSIC ----------------------------------- -->
-    <button
-      type="button"
-      id="tombol-musik"
-      style="position: fixed; bottom: 9vh; right: 2vh; z-index: 999"
-      class="btn btn-light btn-sm rounded-circle btn-music"
-      onclick="play(this)"
-      data-status="true"
-      data-url="assets/music/akad.mp3"
-    >
+    <button type="button" id="tombol-musik" style="position: fixed; bottom: 9vh; right: 2vh; z-index: 999" class="btn btn-light btn-sm rounded-circle btn-music" onclick="play(this)" data-status="true" data-url="assets/music/akad.mp3">
       <i class="fa-solid fa-circle-play"></i>
     </button>
     <!-- ----------------------------------- END BTN MUSIC ----------------------------------- -->
