@@ -2,21 +2,21 @@
 if (window.location.search) {
   const valueKeys = window.location.search;
   const value = new URLSearchParams(valueKeys);
-  valueName = value.get("name");
-  document.getElementById("nama").innerHTML = valueName;
-  document.getElementById("nama-undangan").innerHTML = valueName;
+  valueName = value.get('name');
+  document.getElementById('nama').innerHTML = valueName;
+  document.getElementById('nama-undangan').innerHTML = valueName;
 }
 // ------------------------------------------- END GET URL PARAM -------------------------------------------
 
 // ------------------------------------------- BUKA MODAL AUTOPLAY MUSIC -------------------------------------------
 const buka = async () => {
-  document.getElementById("navigation").removeAttribute("id");
-  document.getElementById("modalKu").removeAttribute("id");
-  document.getElementById("tombol-musik").style.display = "block";
+  document.getElementById('navigation').removeAttribute('id');
+  document.getElementById('modalKu').removeAttribute('id');
+  document.getElementById('tombol-musik').style.display = 'block';
   audio.play();
-  const btn = document.getElementById("tombol-musik");
+  const btn = document.getElementById('tombol-musik');
   btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
-  btn.style.display("block");
+  btn.style.display('block');
 };
 // ------------------------------------------- END BUKA MODAL AUTOPLAY MUSIC -------------------------------------------
 
@@ -28,9 +28,7 @@ const audio = (() => {
     if (!instance) {
       instance = new Audio();
       instance.autoplay = true;
-      instance.src = document
-        .getElementById("tombol-musik")
-        .getAttribute("data-url");
+      instance.src = document.getElementById('tombol-musik').getAttribute('data-url');
       instance.load();
       instance.currentTime = 0;
       instance.volume = 1;
@@ -52,12 +50,12 @@ const audio = (() => {
 })();
 
 const play = (btn) => {
-  if (btn.getAttribute("data-status").toString() != "true") {
-    btn.setAttribute("data-status", "true");
+  if (btn.getAttribute('data-status').toString() != 'true') {
+    btn.setAttribute('data-status', 'true');
     audio.play();
     btn.innerHTML = '<i class="bi bi-pause-circle"></i>';
   } else {
-    btn.setAttribute("data-status", "false");
+    btn.setAttribute('data-status', 'false');
     audio.pause();
     btn.innerHTML = '<i class="bi bi-play-circle"></i>';
   }
@@ -69,10 +67,10 @@ const play = (btn) => {
 let hariPernikahan = new Date(2023, 6, 15);
 console.log(hariPernikahan);
 
-let hari = document.getElementById("hari");
-let jam = document.getElementById("jam");
-let menit = document.getElementById("menit");
-let detik = document.getElementById("detik");
+let hari = document.getElementById('hari');
+let jam = document.getElementById('jam');
+let menit = document.getElementById('menit');
+let detik = document.getElementById('detik');
 
 setInterval(function () {
   let now = new Date();
@@ -99,7 +97,7 @@ const updateJam = (sisaWaktu) => {
 };
 
 const Number = (number) => {
-  return number < 10 ? "0" + number : number;
+  return number < 10 ? '0' + number : number;
 };
 // ------------------------------------------- END DATE -------------------------------------------
 
@@ -109,7 +107,7 @@ function sendWhatsAppMessage(nomor, pesan) {
   const waPesan = encodeURIComponent(pesan);
   const waUrl = `https://api.whatsapp.com/send?phone=${waNomor}&text=${waPesan}`;
 
-  window.open(waUrl, "_blank");
+  window.open(waUrl, '_blank');
 }
 // -----------------------------------------Last Kirim Wa--------------------------------------------------
 
@@ -135,25 +133,24 @@ function submitForm(event) {
   };
 
   // Kirim permintaan HTTP POST menggunakan fetch
-  fetch("https://mighty-honeybee-36.hasura.app/v1/graphql", {
-    method: "POST",
+  fetch('https://mighty-honeybee-36.hasura.app/v1/graphql', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      "x-hasura-admin-secret":
-        "d61umfEQbfmvDlXvZFQdtJJ3392Y5Ifuju2ozM7BnI5M3rV17MISI7kRA5Dw9o82",
+      'Content-Type': 'application/json',
+      'x-hasura-admin-secret': 'd61umfEQbfmvDlXvZFQdtJJ3392Y5Ifuju2ozM7BnI5M3rV17MISI7kRA5Dw9o82',
     },
     body: JSON.stringify(payload),
   })
     .then((response) => response.json())
     .then((data) => {
-      alert("Ucapan Berhasil Terkirim ");
+      alert('Ucapan Berhasil Terkirim ');
       form.reset();
-      const nomorPenerima = "62895638079961";
+      const nomorPenerima = '62895638079961';
       const pesanWhatsApp = ` ${ucapan} dari, ${nama}`;
       sendWhatsAppMessage(nomorPenerima, pesanWhatsApp);
     })
     .catch((error) => {
-      console.error("Terjadi kesalahan saat mengirim data:", error);
+      console.error('Terjadi kesalahan saat mengirim data:', error);
     });
 }
 // --------------------------------------Last mengirim ucapan -----------------------------------------
@@ -163,10 +160,10 @@ function submitForm(event) {
 // Fungsi untuk mendapatkan data ucapan terbaru
 function getLatestUcapan() {
   function formatTime(time) {
-    const [hour, minute, second] = time.split(":");
+    const [hour, minute, second] = time.split(':');
 
     let formattedHour = parseInt(hour);
-    const amPm = formattedHour < 12 ? "AM" : "PM";
+    const amPm = formattedHour < 12 ? 'AM' : 'PM';
     if (formattedHour === 0) {
       formattedHour = 12;
     } else if (formattedHour > 12) {
@@ -179,12 +176,11 @@ function getLatestUcapan() {
     const formattedTime = `${formattedHour}:${formattedMinute}:${formattedSecond} ${amPm}`;
     return formattedTime;
   }
-  fetch("https://mighty-honeybee-36.hasura.app/v1/graphql", {
-    method: "POST",
+  fetch('https://mighty-honeybee-36.hasura.app/v1/graphql', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
-      "x-hasura-admin-secret":
-        "d61umfEQbfmvDlXvZFQdtJJ3392Y5Ifuju2ozM7BnI5M3rV17MISI7kRA5Dw9o82",
+      'Content-Type': 'application/json',
+      'x-hasura-admin-secret': 'd61umfEQbfmvDlXvZFQdtJJ3392Y5Ifuju2ozM7BnI5M3rV17MISI7kRA5Dw9o82',
     },
     body: JSON.stringify({
       query: `
@@ -201,16 +197,16 @@ function getLatestUcapan() {
   })
     .then((response) => response.json())
     .then((data) => {
-      const ucapanContainer = document.getElementById("ucapan-container");
-      ucapanContainer.innerHTML = "";
-      const count = document.getElementById("countUcapan");
+      const ucapanContainer = document.getElementById('ucapan-container');
+      ucapanContainer.innerHTML = '';
+      const count = document.getElementById('countUcapan');
       count.innerHTML = `
       <p>(${data.data.Ucapan.length})</p>
       `;
       const latestUcapan = data.data.Ucapan.slice(-3);
       latestUcapan.forEach((ucapan) => {
-        const ucapanItem = document.createElement("div");
-        ucapanItem.classList.add("ucapan-item");
+        const ucapanItem = document.createElement('div');
+        ucapanItem.classList.add('ucapan-item');
         const createTime = ucapan.create_At;
         const formattedTime = formatTime(createTime);
         ucapanItem.innerHTML = `
@@ -225,10 +221,13 @@ function getLatestUcapan() {
       });
     })
     .catch((error) => {
-      console.error("Terjadi kesalahan saat mengambil data:", error);
+      console.error('Terjadi kesalahan saat mengambil data:', error);
     });
 }
 
 getLatestUcapan();
 
 // -------------------------------------- ucapan -----------------------------------------
+
+// block klik kanan
+document.addEventListener('contextmenu', (event) => event.preventDefault());
