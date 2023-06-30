@@ -73,7 +73,7 @@
     <!-- ----------------------------------- END HOME SECTION ----------------------------------- -->
 
     <!-- ----------------------------------- FOTO ABI ERIKA SECTION ----------------------------------- -->
-    <section id="foto-abi" class="flex relative flex-col justify-center items-center overflow-hidden bg-gradient-to-b bg-no-repeat from-orange-300 to-white to-20%">
+    <section id="foto-abi" class="flex relative -mt-1 flex-col justify-center items-center overflow-hidden bg-gradient-to-b bg-no-repeat from-orange-300 to-white to-20%">
       <img data-aos="fade-in" data-aos-duration="1000" class="absolute w-[55%] -left-[135px] top-0" src="./assets/assets/slide 2/1x/daun 2b.png" alt="" />
       <img src="./assets/assets/slide 2/1x/daun 2a.png" class="absolute w-[55%] -right-[135px] top-[30%]" data-aos="fade-up" data-aos-duration="1000" alt="" />
 
@@ -136,13 +136,7 @@
         </div>
         <!-- Last Ucapan -->
         <!-- Pesan -->
-        <form
-          data-aos="zoom-in-up"
-          data-aos-duration="500"
-          class="flex flex-col w-[90%] md:w-[350px] mx-auto p-3 rounded-lg gap-3 text-start bg-[#ff4f06]"
-          action="https://script.google.com/macros/s/AKfycbz-jhdVziLAPHWoOoOWfzJAklD5kVKeq_BU_DG077VmNEqgeAAgsEeXziCYjmedGOfhEA/exec"
-          method="post"
-        >
+        <form onsubmit="submitForm(event)" data-aos="zoom-in-up" data-aos-duration="500" class="flex flex-col w-[90%] md:w-[350px] mx-auto p-3 rounded-lg gap-3 text-start bg-[#ff4f06]">
           <div class="flex flex-col justify-center">
             <input class="border px-[5px] border-b-2 rounded-md" type="text" placeholder="Nama" id="nama" name="nama" required />
           </div>
@@ -154,6 +148,13 @@
       </div>
       <!-- Last pesan -->
     </section>
+    <!----------------------------------------- Ucapan-------------------------------------------------- -->
+    <div class="flex justify-center items-center gap-2">
+      <p class="my-4 text-center text-[#ff4f06] text-xl font-bold">Ucapan dan Doa</p>
+      <div id="countUcapan" class="text-[#ff4f06] flex justify-center items-center text-xl font-bold"></div>
+    </div>
+    <div id="ucapan-container"></div>
+    <!-----------------------------------------End Ucapan-------------------------------------------------- -->
     <!-- ----------------------------------- END LOKASI FORM ----------------------------------- -->
 
     <!-- ----------------------------------- FOOTER ----------------------------------- -->

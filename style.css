@@ -11,3 +11,15 @@
 #navigation {
   display: none;
 }
+.ucapan-item {
+  background-color: rgb(255 237 213);
+  margin: 8px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.line {
+  background-color: black;
+  height: 0.5px;
+  margin: 3px;
+}
