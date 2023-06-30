@@ -107,7 +107,7 @@ const Number = (number) => {
 function sendWhatsAppMessage(nomor, pesan) {
   const waNomor = encodeURIComponent(nomor);
   const waPesan = encodeURIComponent(pesan);
-  const waUrl = `https://web.whatsapp.com/send?phone=${waNomor}&text=${waPesan}`;
+  const waUrl = `https://api.whatsapp.com/send?phone=${waNomor}&text=${waPesan}`;
 
   window.open(waUrl, "_blank");
 }
