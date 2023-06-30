@@ -66,7 +66,7 @@ const play = (btn) => {
 // ------------------------------------------- END PLAY MUSIC -------------------------------------------
 
 // ------------------------------------------- DATE -------------------------------------------
-let hariPernikahan = new Date(2023, 6, 7);
+let hariPernikahan = new Date(2023, 6, 15);
 console.log(hariPernikahan);
 
 let hari = document.getElementById("hari");
@@ -215,11 +215,11 @@ function getLatestUcapan() {
         const formattedTime = formatTime(createTime);
         ucapanItem.innerHTML = `
           <div class="flex justify-between">
-            <p class="text-xl my-2 font-bold">${ucapan.nama}</p>
+            <p class="text-base my-2 font-bold">${ucapan.nama}</p>
             <p class="my-2">${formattedTime}</p>
           </div>
           <div class="line"></div>
-          <span class="text-lg text-gray-600">${ucapan.ucapan}</span>
+          <span class="text-sm text-gray-600">${ucapan.ucapan}</span>
         `;
         ucapanContainer.appendChild(ucapanItem);
       });
